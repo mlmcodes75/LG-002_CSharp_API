@@ -39,7 +39,10 @@ Write the notes for someone rereading them months later: they should make sense 
 ## Commands
 
 - Build: `dotnet build`
+- Test: `dotnet test`
 - Run: `dotnet run --project src/App`
+
+CI (`.github/workflows/ci.yml`) runs restore, build, and test on every pull request. The build treats warnings as errors, so fix nullable and other compiler warnings rather than suppressing them. Run the same commands locally before pushing.
 
 ## How to work with me: mixed tutoring mode
 
