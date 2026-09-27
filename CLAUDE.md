@@ -25,6 +25,8 @@ Planned sections (order may change as we go):
 6. Authentication and authorization
 7. AI integration: calling the Claude API from C#
 
+Progress is tracked in `LEARNING.md`. The `/next-lesson` skill (`.claude/skills/next-lesson/`) reviews the current lesson or sets up the next one.
+
 ## Knowledge notes
 
 Every project has a `NOTES.md` at its root that summarizes what was learned, for later review. At the end of each lesson, Claude updates the notes for that section's project with:
