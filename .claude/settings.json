@@ -17,15 +17,19 @@
       "Bash(git diff *)",
       "Bash(git log *)",
       "Bash(git show *)",
-      "Bash(git branch *)"
+      "Bash(git branch)",
+      "Bash(git branch --list *)",
+      "Bash(git branch --show-current)",
+      "Bash(git branch -a)"
     ],
     "ask": [
       "Bash(dotnet add * package *)"
     ],
     "deny": [
-      "Read(./.env)",
-      "Read(./.env.*)",
-      "Read(**/secrets.json)"
+      "Read(**/.env)",
+      "Read(**/.env.*)",
+      "Read(**/secrets.json)",
+      "Read(~/.microsoft/usersecrets/**)"
     ]
   }
 }
