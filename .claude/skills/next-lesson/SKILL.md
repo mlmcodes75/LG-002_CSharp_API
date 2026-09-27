@@ -20,7 +20,7 @@ The owner was given a task. Check whether they have pushed code for it.
 
 - **Pushed:** review it. Run `dotnet build` and `dotnet test` first. Report bugs first, then idiomatic improvements, each with the reasoning. If changes are needed, ask the owner to make them and stop here. Don't fix their code for them unless they ask.
 - **Not pushed:** restate the task briefly, offer a hint, and stop.
-- **Approved:** update the section's `NOTES.md` (format in `CLAUDE.md`), set the entry to `done`, and link the PR. Then continue to step 3 only if the owner wants the next lesson now.
+- **Approved:** on the lesson branch, update the section's `NOTES.md` (format in `CLAUDE.md`), set the `LEARNING.md` entry to `done` with the PR link, then commit and push, so both land in the lesson's PR. The owner opens the PR; merge it only when the owner asks and CI is green. Continue to step 3 only if the owner wants the next lesson now.
 
 ## 3. Plan the next lesson
 
@@ -33,7 +33,7 @@ The owner was given a task. Check whether they have pushed code for it.
 - Branch from the latest `main`. Use the session's designated branch if one is given, otherwise `lesson/SNN-LMM-<short-slug>` (e.g. `lesson/S01-L02-route-parameters`).
 - Write only the plumbing. Leave the core logic as a clearly marked gap (e.g. a `// TODO(lesson):` comment) that still compiles.
 - If practical, add a test that fails until the owner's code works, so success is objective.
-- Run `dotnet build -warnaserror` and `dotnet test`. Only a failing lesson test is acceptable.
+- Run `dotnet build -warnaserror` and `dotnet test`. Only a failing lesson test is acceptable, and it will keep CI red on the lesson PR until the owner's code works. Tell the owner that's expected.
 - Add an entry to `LEARNING.md` with status `in progress`, then commit and push.
 
 ## 5. Present the lesson
